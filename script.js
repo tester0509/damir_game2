@@ -8,6 +8,10 @@ function game_start(){
     document.querySelector('.game-scene').setAttribute('style','height:'+height+'px;');
     console.log(width);
     move_obj(create_obj());
+    move_obj(create_obj());
+    move_obj(create_obj());
+    move_obj(create_obj());
+    move_obj(create_obj());
 }
 
 function create_obj(){
@@ -31,6 +35,9 @@ function move_obj(obj){
             console.log('счёт');
             score++;
             document.getElementsByClassName('score')[0].innerHTML = score;
+            if(score==20){
+                alert('Поздравляю вы выебали 10 овец!');
+            }
             start = -1;
         }
     }
